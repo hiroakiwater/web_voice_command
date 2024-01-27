@@ -17,7 +17,7 @@ let commands = [
 // this is word list in your web page.
 let words = ['menu']
 
-let voice = new WebVoiceCommand(commands, words);
+let voice = new WebVoiceCommand(commands, words, "en-US");
 document.body.onlick = () => {
   voice.startListen();
 }
