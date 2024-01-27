@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>test</title>
+    <script src="scripts/web_voice_command.js"></script>
+  </head>
+  <body>
+    <div>
+      <a href="menu.html">menu</a>
+    </div>
+    <script>
+      let commands = [{name: 'move', action: 'click'}];
+      let words = ['menu'];
+
+      let voice = new WebVoiceCommand(commands, words);
+      document.body.onclick = () => {
+        voice.startListen();
+      };
+      
+    </script>
+  </body>
+</html>
