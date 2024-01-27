@@ -1,9 +1,10 @@
 // verison: 0.1
 // wirtten by hiroakiwater
 class WebVoiceCommand {
-  constructor(commands, words) {
+  constructor(commands, words, lang) {
     this.commands = commands;
     this.words = words;
+    this.lang = lang;
 
     this.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
   }
@@ -11,7 +12,7 @@ class WebVoiceCommand {
   startListen() {
     this.recognition = new this.SpeechRecognition();
     this.recognition.continuous = true;
-    this.recognition.lang = 'en-US';
+    this.recognition.lang = this.lang;
     this.recognition.onresult = (event) => {
       const length = event.results.length - 1;
       const results = event.results;

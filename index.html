@@ -11,7 +11,7 @@
       let commands = [{name: 'move', action: 'click'}];
       let words = ['menu'];
 
-      let voice = new WebVoiceCommand(commands, words);
+      let voice = new WebVoiceCommand(commands, words, "en-US");
       document.body.onclick = () => {
         voice.startListen();
       };
